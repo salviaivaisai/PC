@@ -1,0 +1,22 @@
+Silvia Marogel
+325CB
+
+Tema 2 - PC
+
+Am folosit ca punct de pornire scheletul de cod din laboratorul 8, pe care apoi am continuat sa fac prelucrarea datelor.
+
+In server.c :
+Structura client are campurile nume - client_name, prenume - client_surname, numar card - client_cardno, pin card - client_cardpin, parola - client_passwd si sold - client_sold.
+
+Se citeste fisierul si se foloseste un vector de clienti (cl) pentru a tine baza de date.
+
+ Dupa ce se verifica conexiunile, serverul incepe sa primeasca date sub forma de comenzi. Pentru fiecare comanda, exista o conditie de verificare in server.
+
+ Am pus o conditie speciala pentru unlock, ce foloseste un socket UDP.
+
+ Atunci cand primeste quit, se inchide fisierul de log si se pregateste pentru a se inchide conexiunea.
+
+ In client.c:
+ Se citesc comenzile de la tastatura si se trimit pe sockfd.
+
+ Pentru UDP este udp_sock, ce trimite un request pentru unlock si apoi parola.
